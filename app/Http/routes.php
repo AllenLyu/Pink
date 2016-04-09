@@ -17,3 +17,4 @@ Route::get('/', function () {
 
 
 Route::controller('bbs', 'bbsController');
+Route::controller('mdd', 'mddController');

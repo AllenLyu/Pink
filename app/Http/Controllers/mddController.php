@@ -3,21 +3,22 @@
  * Created by PhpStorm.
  * User: allenlyu
  * Date: 4/9/16
- * Time: 9:40 AM
+ * Time: 9:29 PM
  */
+
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 
-class bbsController extends Controller
+class mddController extends Controller
 {
     public function getIndex()
     {
-        $conments = DB::select('select * from bbs left join pink.user on bbs.uid=pink.user.uid');
+        $mdds = DB::table('mdd')->get();
+//        var_dump($mdds);exit();
+        view()->share("mdds",$mdds);
 
-        view()->share("comments",$conments);
-
-        return view("bbs");
+        return view("mdd");
     }
 
     public function getIns()
