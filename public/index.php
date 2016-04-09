@@ -46,7 +46,12 @@ $app = require_once __DIR__.'/../bootstrap/app.php';
 | and wonderful application we have prepared for them.
 |
 */
-
+session_start();
+$user = array(
+    'uid'=>10001,
+    'name'=>'pink',
+);
+$_SESSION['user'] = $user;
 $kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
 
 $response = $kernel->handle(

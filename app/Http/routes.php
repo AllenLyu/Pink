@@ -16,11 +16,4 @@ Route::get('/', function () {
 });
 
 
-Route::get('we', function () {
-
-    $id = \Illuminate\Support\Facades\Input::get("id");
-    view()->share("nihao",$id);
-    $res = DB::table('test')->get();
-    var_dump($res);exit();
-    return $id;
-});
+Route::controller('bbs', 'bbsController');
