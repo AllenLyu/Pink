@@ -19,3 +19,7 @@ Route::get('/', function () {
 Route::controller('bbs', 'bbsController');
 Route::controller('mdd', 'mddController');
 Route::controller('poi', 'poiController');
+Route::controller('hotel', 'hotelController');
+Route::controller('line', 'lineController');
+Route::controller('favor', 'favorController');
+Route::controller('my', 'myController');
