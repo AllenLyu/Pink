@@ -1,6 +1,15 @@
 {{--<script type="text/javascript" src="../../public/js/jquery.js"></script>--}}
-<script type="text/javascript" src="../../public/js/jquery-2.2.3.min.js"></script>
-    <div>
+<script type="text/javascript" src="/public/js/jquery-2.2.3.min.js"></script>
+
+<div>
+    @foreach($arts as $art)
+        <a href="artitle?id={{$art->artitleid}}"> <h1>{{$art->title}}</h1></a>
+    @endforeach
+</div>
+
+
+
+    <div style="margin-top: 20px">
         <table id="tab" border="1" cellspacing="1" style="background-color:#a0c6e5">
         @foreach($comments as $comment)
             <tr>

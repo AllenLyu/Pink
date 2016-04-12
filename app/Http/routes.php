@@ -23,3 +23,4 @@ Route::controller('hotel', 'hotelController');
 Route::controller('line', 'lineController');
 Route::controller('favor', 'favorController');
 Route::controller('my', 'myController');
+Route::controller('artitle', 'artController');

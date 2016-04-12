@@ -14,8 +14,9 @@ class bbsController extends Controller
     public function getIndex()
     {
         $conments = DB::select('select * from bbs left join pink.user on bbs.uid=pink.user.uid');
-
+        $art = DB::select('select artitleid,title from artitle');
         view()->share("comments",$conments);
+        view()->share("arts",$art);
 
         return view("bbs");
     }

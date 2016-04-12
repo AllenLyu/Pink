@@ -1,6 +1,6 @@
 
-<script type="text/javascript" src="../../public/js/jquery-2.2.3.min.js"></script>
-<script type="text/javascript" src="../../public/js/addFavor.js"></script>
+<script type="text/javascript" src="/public/js/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="/public/js/addFavor.js"></script>
 <div style="display: block">
     <h1>{{$mdd->name}}</h1>
     @foreach($pois as $poi)

@@ -21,4 +21,29 @@ class hotelController extends Controller
         view()->share("poi",$poi[0]);
         return view('hotel');
     }
+
+    public function getDetail()
+    {
+        $id = Input::get('id');
+        $data = DB::select('SELECT * FROM pink.hotel where hid='.$id);
+        view()->share('hotels',$data);
+//        var_dump($data);exit();
+        return view('detail');
+    }
+
+
+
+
+    public function getCart()
+    {
+//        $hid = Input::get('id');
+        $data = array(
+            'hid'=>Input::get('id'),
+            'starttime'=>Input::get('start'),
+            'endtime'=>Input::get('end'),
+            'uid'=>$_SESSION['user']['uid']
+        );
+
+        return DB::table('cart')->insertGetId($data);
+    }
 }
