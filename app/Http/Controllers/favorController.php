@@ -21,4 +21,11 @@ class favorController extends Controller
         return DB::table('favor')->insertGetId($favor);
 
     }
+
+
+    public function getCancle()
+    {
+        $res = DB::table('favor')->where('idfavor',Input::get('idfavor'))->delete();
+        return $res;
+    }
 }

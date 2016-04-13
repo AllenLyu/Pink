@@ -11,3 +11,15 @@ function addFavor(id,type)
         }
     })
 }
+
+
+function cancleFavor(idfavor)
+{
+    $.get('favor/cancle',{idfavor:idfavor},function(data)
+    {
+        if (data)
+        {
+            alert('cancle success!');
+        }
+    })
+}
