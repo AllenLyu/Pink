@@ -24,3 +24,4 @@ Route::controller('line', 'lineController');
 Route::controller('favor', 'favorController');
 Route::controller('my', 'myController');
 Route::controller('artitle', 'artController');
+Route::controller('search', 'searchController');
